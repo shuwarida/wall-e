@@ -1,0 +1,21 @@
+{
+  "name": "wall-e",
+  "version": "2.0.0",
+  "description": "macOS menu-bar app: WALL-E sound reactions to system events",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "bash scripts/dev.sh",
+    "build:app": "bash scripts/build-app.sh",
+    "build:app:universal": "UNIVERSAL=1 bash scripts/build-app.sh",
+    "build:dmg": "DMG=1 UNIVERSAL=1 bash scripts/build-app.sh",
+    "install-agent": "mkdir -p ~/Library/Logs/wall-e && cp com.wall-e.app.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.wall-e.app.plist",
+    "uninstall-agent": "launchctl unload ~/Library/LaunchAgents/com.wall-e.app.plist && rm ~/Library/LaunchAgents/com.wall-e.app.plist"
+  },
+  "dependencies": {
+    "systeminformation": "^5.31.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

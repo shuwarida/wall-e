@@ -1,0 +1,16 @@
+# Build artifacts
+dist/
+swift/.build/
+
+# Generated sounds (created at first launch)
+sounds/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Claude Code internal
+.claude/
