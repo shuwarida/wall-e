@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "gen:emotions": "node gen-emotions.js",
     "dev": "bash scripts/dev.sh",
     "build:app": "bash scripts/build-app.sh",
     "build:app:universal": "UNIVERSAL=1 bash scripts/build-app.sh",
